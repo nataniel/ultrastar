@@ -14,12 +14,12 @@ class Song
     public function __construct(array $data)
     {
         $this->id = $data["﻿"];
-        $this->artist = $data['Wykonawca'];
-        $this->title = $data['Tytuł'];
-        $this->language = $data['Język'];
-        $this->type = $data['Rodzaj Muzyki'];
-        $this->year = $data['Rok'];
-        $this->path = $data['Ścieżka Utworu'];
+        $this->artist = $data['Wykonawca'] ?? $data['Artist'];
+        $this->title = $data['Tytuł'] ?? $data['Title'];
+        $this->language = $data['Język'] ?? $data['Language'];
+        $this->type = $data['Rodzaj Muzyki'] ?? $data['Genre'];
+        $this->year = $data['Rok'] ?? $data['Year'];
+        $this->path = $data['Ścieżka Utworu'] ?? $data['Song Path'];
     }
 
     public function getId(): string
